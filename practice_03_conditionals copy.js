@@ -13,23 +13,29 @@
 //   "positive odd"    if num is positive and odd
 //   "negative even"   if num is negative and even
 //   "negative odd"    if num is negative and odd
-function classifyNumber(num) {
+/* function classifyNumber(num) {
   // TODO: your code here
  if (num === 0){
-  console.log ("0")
+  return ("zero")
  }
 else if (num > 0 && num % 2 === 0) {
-  console.log ("positive even")
+  return ("positive even")
 }
 else if (num > 0 && num % 2 === 1) {
-  console.log ("positive odd")
+  return ("positive odd")
+}
+else if (num < 0 && num % 2 === 0) {
+  return ("negative even")
+}
+else if (num < 0 && num % 2 === 1){
+  return ("negative odd")
 }
 }
 console.log(classifyNumber(0)); // "zero"
 console.log(classifyNumber(4)); // "positive even"
 console.log(classifyNumber(7)); // "positive odd"
 console.log(classifyNumber(-4)); // "negative even"
-console.log(classifyNumber(-7)); // "negative odd"
+console.log(classifyNumber(-7)); // "negative odd" */
 
 // ---------- Problem 2: Grade Calculator ----------
 // Return the letter grade for score (0-100):
@@ -41,6 +47,27 @@ console.log(classifyNumber(-7)); // "negative odd"
 // If score is less than 0 or greater than 100, return "Invalid score".
 function getLetterGrade(score) {
   // TODO: your code here
+if (score >= 90 && score <= 100){
+  return ("A")
+}
+else if (score <= 90 && score >= 80){
+  return ("B")
+}
+else if (score <= 79 && score >= 70){
+  return ("C")
+}
+else if (score <= 69 && score >= 60){
+  return ("D")
+}
+else if (score < 60 && score >= 0){
+  return ("F")
+}
+else if (score < 0){
+  return ("invalid score")
+}
+else if (score > 100){
+  return ("invalid score")
+}
 }
 
 console.log(getLetterGrade(95)); // "A"
@@ -57,6 +84,15 @@ console.log(getLetterGrade(150)); // "Invalid score"
 //   otherwise, num converted to a string
 function fizzBuzz(num) {
   // TODO: your code here
+if (num % 3 === 0){
+  return ("Fizz")
+}
+else if (num % 5 === 0){
+  return ("Buzz")
+}
+else if (num % 3 === 0 && num % 5 === 0){
+  return ("FizzBuzz")
+}
 }
 
 console.log(fizzBuzz(3)); // "Fizz"
